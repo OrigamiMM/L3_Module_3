@@ -11,6 +11,7 @@ public class TestInterfaces {
 		SpecialString bs = new BackwardsString("This is a test");
 		System.out.println(bs);
 		assertEquals("tset a si sihT", bs.toString());
+	
 	}
 	
 	@Test
@@ -19,5 +20,5 @@ public class TestInterfaces {
 		System.out.println(mcs);
 		assertEquals("tHiS Is aLsO A TeSt", mcs.toString());
 	}
-
+abstract String funkifyText();
 }
