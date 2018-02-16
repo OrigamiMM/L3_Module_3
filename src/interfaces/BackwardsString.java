@@ -1,11 +1,9 @@
 package interfaces;
 
-import java.util.ArrayList;
+import java.util.Stack;
 
 public class BackwardsString extends SpecialString {
-	ArrayList<String> letter = new ArrayList<String>();
-	String BackS = "";
-
+	Stack<String> letter = new Stack<String>();
 	public BackwardsString(String s) {
 		super(s);
 		// TODO Auto-generated constructor stub
@@ -13,12 +11,13 @@ public class BackwardsString extends SpecialString {
 	}
 
 	public String funkifyText(String s) {
+		String BackS = "";
 		for (int i = 0; i < s.length(); i++) {
-			String w = String.valueOf(s.indexOf(i));
-			letter.add(w);
+			String w = String.valueOf(s.charAt(i));
+			letter.push(w);
 		}
-		for (int i = s.length(); i < 0; i--) {
-			BackS += letter.get(i);
+		for (int i = 0; i < s.length(); i++) {
+			BackS += letter.pop();
 		}
 		return BackS;
 	}
