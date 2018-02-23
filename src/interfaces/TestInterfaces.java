@@ -14,10 +14,10 @@ public class TestInterfaces {
 	
 	}
 	
-	//@Test
-	//public void testMixedCapsString() {
-		//SpecialString mcs = new MixedCapsString("This is also a test");
-		//System.out.println(mcs);
-		//assertEquals("tHiS Is aLsO A TeSt", mcs.toString());
-	//}
+	@Test
+	public void testMixedCapsString() {
+		SpecialString mcs = new MixedCapsString("This is also a test");
+		System.out.println(mcs);
+		assertEquals("tHiS Is aLsO A TeSt", mcs.toString());
+	}
 }
